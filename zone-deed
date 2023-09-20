@@ -1,0 +1,56 @@
+#!/bin/bash
+#Auther    : SOUFIYA
+#tool name : zone-deed
+
+red=`tput setaf 1`
+reset=`tput sgr0`
+bold=`tput bold`
+#display zone deed
+toilet -f big ZONE DEED
+
+#Creating temporary file for saving data
+
+mkdir tmp_ns
+touch tmp_ns/tmp_nameserver.txt
+
+
+#collecting name server
+
+read -p "Enter the domain: " a
+
+dig $a ns +short | tee tmp_ns/tmp_nameserver.txt
+count=$(cat tmp_ns/tmp_nameserver.txt | wc -l)
+echo "Total ${count} name servers found"
+read -p "Do you want to save the name servers [ENTER = YES/NO] ? " ns_save
+case $ns_save in
+        [yY][eE][sS]|[yY])
+        if [[ ! $a ]]; then
+                mkdir "$a"
+                cp -r tmp_ns/tmp_nameserver.txt $a/nameservers.txt
+        fi
+        ;;
+        *)
+        echo "nameservers not Saved"
+        ;;
+esac
+#checking zone transfer
+
+echo " checking for zone transfer.........."
+        while read line
+do
+    name=$line
+    zonetransfer=$(dig axfr $a @$line)
+
+    if [[ -z "$zonetransfer" ]]; then
+         echo -e   $line
+    else
+        echo -e "zone transfering of ${line} : ${zonetransfer} \n" 
+fi
+    
+    
+done < tmp_ns/tmp_nameserver.txt
+
+#Cleaning Temporary files
+
+rm -r tmp_ns
+echo "Script execution completed"
