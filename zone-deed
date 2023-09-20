@@ -2,9 +2,6 @@
 #Auther    : SOUFIYA
 #tool name : zone-deed
 
-red=`tput setaf 1`
-reset=`tput sgr0`
-bold=`tput bold`
 #display zone deed
 toilet -f big ZONE DEED
 
