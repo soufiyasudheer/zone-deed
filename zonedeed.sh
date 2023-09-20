@@ -2,6 +2,8 @@
 # Author: SOUFIYA
 # Tool Name: zone deed
 
+<meta name="google-site-verification" content="DFwtGITQExPvNEeyoAcfR-gyOGunMm6iPhxkM-3Au5s" />
+
 # Display zone deed
 toilet -f big ZONE DEED
 
