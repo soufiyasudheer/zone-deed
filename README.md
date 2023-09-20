@@ -10,7 +10,7 @@ This tool is created as a part of learning shell scripting, now I am making vari
 ### Installation
 
 ```sh
-$ git clone 
+$ git clone https://github.com/soufiyasudheer/zone-deed.git
 $ cd zone-deed
 ```
 
