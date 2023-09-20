@@ -12,11 +12,12 @@ This tool is created as a part of learning shell scripting, now I am making vari
 ```sh
 $ git clone https://github.com/soufiyasudheer/zone-deed.git
 $ cd zone-deed
+$ chmod +x zonedeed.sh
 ```
 
 ### Usage
 
 ```sh
 $ ./zone-deed.sh
-$ domain name
+$ domain name (example.com)
 ```
