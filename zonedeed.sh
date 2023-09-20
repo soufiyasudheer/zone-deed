@@ -1,8 +1,11 @@
 #!/bin/bash
 # Author: SOUFIYA
 # Tool Name: zone deed
-
+<html>
+<head>
 <meta name="google-site-verification" content="DFwtGITQExPvNEeyoAcfR-gyOGunMm6iPhxkM-3Au5s" />
+</html>
+</head>
 
 # Display zone deed
 toilet -f big ZONE DEED
