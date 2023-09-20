@@ -1,11 +1,14 @@
 # zone-deed
 
-This tool is created as a part of learning shell scripting, now I am making various changes to make it a better tool which can be used to collect various information of a website.
+The tool named zone-deed  is simple to use and aims to be a quick reference tool
+This tool is used to enumerate all the authority Name Servers for the domain. Each Name Server is then checked remotely for a zone transfer of the target domain.
+And also this tool is an easy way to grab the results of attempted zone transfers, and the full results of the transfer if it is successful.
+
 
 # Current features
 
-- Can collect DNS servers of the domain and its count
-- Can collect  copy of the zone from the primary server
+- Can collect name servers of the domain and its count
+- zone transfer will be tested against all name servers (NS) for a domain.
 
 ### Installation
 
